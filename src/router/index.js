@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import { baseRoutes } from './baseRoutes'
-import { hiddenRoutes } from './hiddenRoutes'
+import { baseRoutes } from './modules/baseRoutes'
+import { hiddenRoutes } from './modules/hiddenRoutes'
 
 Vue.use(Router)
 
@@ -32,7 +32,6 @@ Vue.use(Router)
  * (*) hiddenRoutes must be place at the end!
  */
 export const constantRoutes = [...baseRoutes, ...hiddenRoutes]
-console.log(constantRoutes)
 
 const createRouter = () =>
   new Router({
