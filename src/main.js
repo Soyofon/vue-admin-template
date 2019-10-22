@@ -16,6 +16,7 @@ import router from './router'
 import i18n from './lang'
 import '@/icons' // icon
 import '@/permission' // permission control
+import '@/assets/css/tailwind.css'
 
 /**
  * If you don't want to use mock-server

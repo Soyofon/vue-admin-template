@@ -18,6 +18,27 @@ export const baseRoutes = [
     ]
   },
   {
+    path: '/article',
+    component: Layout,
+    redirect: '/article/list',
+    name: 'Article',
+    meta: { title: 'Article', icon: 'example' },
+    children: [
+      {
+        path: 'list',
+        name: 'List',
+        component: () => import('@/views/article/list'),
+        meta: { title: 'article-list' }
+      },
+      {
+        path: 'put',
+        name: 'Put',
+        component: () => import('@/views/article/put'),
+        meta: { title: 'article-put' }
+      }
+    ]
+  },
+  {
     path: 'external-link',
     component: Layout,
     children: [
